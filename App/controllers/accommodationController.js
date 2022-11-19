@@ -20,7 +20,6 @@ exports.postInsertAccommodation = asyncErrorHandler(async (req, res, next) => {
 })
 
 exports.getOneAccommodation = asyncErrorHandler(async (req, res, next) => {
-  const data = { ...req.body }
   const id = req.params.id
   const accommodation = await accommodationModel.findById(id)
 
@@ -55,5 +54,9 @@ exports.patchEditAccommodation = asyncErrorHandler(async (req, res, next) => {
 exports.deleteAccommodation = asyncErrorHandler(async (req, res, next) => {
   const id = req.params.id
 
-  await accommodationModel.findOneAndDelete({ _id: id }, {})
+  await accommodationModel.findOneAndDelete({ _id: id })
+
+  return res.status(200).json({
+    success: true,
+  })
 })
