@@ -7,11 +7,11 @@ const accommodationModel = new mongoose.Schema(
       required: true,
     },
     type: {
-      type: Number,
+      type: String,
       required: true,
     },
     price: {
-      type: Number,
+      type: String,
       required: true,
     },
     unitPrice: {
@@ -19,11 +19,11 @@ const accommodationModel = new mongoose.Schema(
       required: true,
     },
     size: {
-      type: Number,
+      type: String,
       required: true,
     },
     capacity: {
-      type: Number,
+      type: String,
       required: true,
     },
     images: [
@@ -62,6 +62,14 @@ const accommodationModel = new mongoose.Schema(
     status: {
       type: String,
       required: true,
+    },
+    createdAt: {
+      type: Date,
+      default: Date.now,
+    },
+    updatedAt: {
+      type: Date,
+      default: Date.now,
     },
   },
   { collection: 'accommodation' },

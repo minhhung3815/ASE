@@ -5,4 +5,10 @@ const accommodation = require('../controllers/accommodationController')
 
 route.get('/all', accommodation.getAllAccommodation)
 
+route.post('/add', accommodation.postInsertAccommodation)
+
+route.patch('/edit/:id', accommodation.patchEditAccommodation)
+
+route.get('/view/:id', accommodation.getOneAccommodation)
+
 module.exports = route
