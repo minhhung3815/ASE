@@ -4,6 +4,8 @@ const accommodation = require('../controllers/accommodationController')
 
 route.get('/all', accommodation.getAllAccommodation)
 
+route.get('/filter', accommodation.getFilterAccommodation)
+
 route.post('/add', accommodation.postInsertAccommodation)
 
 route.patch('/edit/:id', accommodation.patchEditAccommodation)
