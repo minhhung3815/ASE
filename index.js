@@ -6,7 +6,7 @@ const route = require('./App/routes/index')
 const cors = require('cors')
 
 require('dotenv').config()
-connectDatabase()
+// connectDatabase()
 
 app.use(cors())
 app.use(bodyParser.urlencoded({ extended: false }))
